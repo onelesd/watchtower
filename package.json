@@ -1,0 +1,22 @@
+{
+  "author": "Charlie Revett",
+  "name": "watchtower",
+  "description": "Monitors your site and posts outages to Slack.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/revett/watchtower"
+  },
+  "main": "./lib/watchtower",
+  "keywords": [
+    "monitor",
+    "site",
+    "slack"
+  ],
+  "bin": {
+    "uppercaseme": "./bin/watchtower"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
