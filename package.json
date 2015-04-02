@@ -15,7 +15,10 @@
   "bin": {
     "uppercaseme": "./bin/watchtower"
   },
-  "dependencies": {},
+  "dependencies": {
+    "js-yaml": "^3.2.7",
+    "request": "^2.54.0"
+  },
   "engines": {
     "node": "*"
   }
