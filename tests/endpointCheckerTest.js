@@ -21,7 +21,8 @@ describe("EndpointChecker", function() {
       var expected_results = [
         {
           status: 200,
-          endpoint: endpoints[0]
+          endpoint: endpoints[0],
+          site: endpoints[0].site
         }
       ];
       checker.validate(endpoints, function(results) {
