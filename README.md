@@ -1,8 +1,35 @@
-# watchtower
+<h1 align="center">Watchtower</h1>
 
-Monitors your site and posts outages to **[Slack](https://slack.com/)**.
+**Monitors** your site and posts **downtime** to **[Slack](https://slack.com/)**.
 
-### Note
+### What is this?
 
-- This is basically a rewrite of **[Linkey](https://github.com/DaveBlooman/linkey)** in **Node**.
-- I am not a Node developer **[#ruby4lyf](https://dl.dropboxusercontent.com/u/11304354/ruby4lyf.jpg)**.
+A very simple package which checks the status of links on your site, and posts any outages to Slack. This is heavily based upon the **[Linkey](https://github.com/DaveBlooman/linkey)** gem written by **[@daveblooman](https://github.com/daveblooman)**.
+
+### Usage
+
+*Todo!*
+
+### Configuration
+
+*Todo!*
+
+### Tests
+
+```
+cd watchtower/
+```
+
+```
+npm install && npm install -g mocha
+```
+
+```
+mocha tests/
+```
+
+### Licence
+
+[The MIT License (MIT)](http://opensource.org/licenses/MIT)
+
+Copyright (c) 2015 [Charlie Revett](http://twitter.com/charlierevett)
