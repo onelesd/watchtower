@@ -12,9 +12,18 @@ describe("configParser", function() {
   });
 
   describe("#parse()", function() {
-    var config = {
-      "test": "config"
-    }
+    var config = [
+      {
+        site: "BBC",
+        page_name: "News",
+        url: "http://bbc.co.uk/news"
+      },
+      {
+        site: "Guardian",
+        page_name: "Sport",
+        url: "http://theguardian.com/uk/sport"
+      }
+    ]
 
     it("should parse YAML.", function() {
       assert.deepEqual(config, parser.parse());

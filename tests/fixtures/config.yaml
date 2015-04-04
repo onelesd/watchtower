@@ -1,1 +1,11 @@
-test: "config"
+sites:
+  - name: "BBC"
+    base: "http://bbc.co.uk"
+    endpoints:
+      - name: "News"
+        path: "/news"
+  - name: "Guardian"
+    base: "http://theguardian.com"
+    endpoints:
+      - name: "Sport"
+        path: "/uk/sport"

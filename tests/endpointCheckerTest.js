@@ -1,16 +1,9 @@
-var assert      = require("assert");
-var nock        = require("nock");
-var siteChecker = require("../lib/watchtower/siteChecker.js");
+var assert          = require("assert");
+var nock            = require("nock");
+var endpointChecker = require("../lib/watchtower/endpointChecker.js");
 
-describe("siteChecker", function() {
-  var base    = "http://bbc.co.uk";
-  var checker = new siteChecker(base);
-
-  describe("#new()", function() {
-    it("should set base instance variable.", function() {
-      assert.equal(base, checker.base);
-    });
-  });
+describe("EndpointChecker", function() {
+  var checker = new endpointChecker();
 
   describe("#validate()", function() {
     var bbc = nock("http://bbc.co.uk")
@@ -18,8 +11,9 @@ describe("siteChecker", function() {
               .reply(200, "OK");
     var endpoints = [
       {
-        name: "Test #1",
-        path: "/test-url"
+        site: "BBC",
+        page_name: "Test #1",
+        url: "http://bbc.co.uk/test-url"
       }
     ];
 
