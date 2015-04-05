@@ -1,5 +1,9 @@
 <h1 align="center">Watchtower</h1>
 
+<p align="center">
+  <a href="https://travis-ci.org/revett/watchtower" target="_blank"><img src="https://img.shields.io/travis/revett/watchtower.svg?style=flat-square"></a>
+</p>
+
 **Monitors** your site and posts **downtime** to **[Slack](https://slack.com/)**.
 
 ### What is this?
