@@ -2,4 +2,4 @@ language: node_js
 node_js:
   - "0.12"
 script:
-  - npm install -g mocha && mocha tests/
+  - npm install -g mocha && mocha tests/ && node tests/integration/watchtowerTest.js

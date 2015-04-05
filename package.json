@@ -13,7 +13,7 @@
     "slack"
   ],
   "bin": {
-    "uppercaseme": "./bin/watchtower"
+    "watchtower": "./bin/watchtower"
   },
   "dependencies": {
     "js-yaml": "^3.2.7",

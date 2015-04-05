@@ -1,7 +1,7 @@
 var assert       = require("assert");
 var configParser = require("../lib/watchtower/configParser.js");
 
-describe("configParser", function() {
+describe("ConfigParser", function() {
   var path   = "./tests/fixtures/config.yaml";
   var parser = new configParser(path);
 

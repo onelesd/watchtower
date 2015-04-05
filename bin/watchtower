@@ -5,4 +5,10 @@ var path = require("path");
 var fs   = require("fs");
 var lib  = path.join(path.dirname(fs.realpathSync(__filename)), "../lib");
 
-require(lib + "/watchtower.js").startWatch();
+if (process.argv.length > 2) {
+  var config_path = process.argv[2];
+  require(lib + "/watchtower.js").startWatch(config_path);
+} else {
+  console.error("Error: no config path given.");
+  process.exit(1);
+}

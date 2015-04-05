@@ -10,19 +10,49 @@
 
 A very simple package which checks the status of links on your site, and posts any outages to Slack. This is heavily based upon the **[Linkey](https://github.com/DaveBlooman/linkey)** gem written by **[@daveblooman](https://github.com/daveblooman)**.
 
+### Install
+
+```
+npm install watchtower
+```
+
 ### Usage
 
-*Todo!*
+First create a **config.yaml** (see section below), then:
 
-### Configuration
+```js
+var watchtower  = require("watchtower");
+var config_path = "/path/to/config.yaml";
 
-*Todo!*
+watchtower.startWatch(config_path);
+```
+
+or run from the **command-line**:
+
+```
+watchtower /path/to/config.yaml
+```
+
+### Config
+
+```yaml
+sites:
+  - name: "BBC"
+    base: "http://bbc.co.uk"
+    endpoints:
+      - name: "News Home Page"
+        path: "/news"
+      - name: "Election 2015 Home Page"
+        path: "/news/election/2015"
+  - name: "Guardian"
+    base: "http://theguardian.com"
+    endpoints:
+      - name: "UK Home Page"
+        path: "/uk"
+
+```
 
 ### Tests
-
-```
-cd watchtower/
-```
 
 ```
 npm install && npm install -g mocha
