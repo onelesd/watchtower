@@ -4,7 +4,9 @@
   <a href="https://travis-ci.org/revett/watchtower" target="_blank"><img src="https://img.shields.io/travis/revett/watchtower.svg?style=flat-square"></a>
 </p>
 
-**Monitors** your site and posts **downtime** to **[Slack](https://slack.com/)**.
+<p align="center">
+  <b>Monitors</b> your site and posts <b>downtime</b> to <b><a href="https://slack.com/">Slack</a></b>.
+</p>
 
 ### What is this?
 

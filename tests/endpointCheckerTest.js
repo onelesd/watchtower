@@ -6,9 +6,7 @@ describe("EndpointChecker", function() {
   var checker = new endpointChecker();
 
   describe("#validate()", function() {
-    var bbc = nock("http://bbc.co.uk")
-              .get("/test-url")
-              .reply(200, "OK");
+    nock("http://bbc.co.uk").get("/test-url").reply(200, "OK");
     var endpoints = [
       {
         site: "BBC",
