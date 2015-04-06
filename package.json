@@ -16,6 +16,7 @@
     "watchtower": "./bin/watchtower"
   },
   "dependencies": {
+    "cli-color": "^0.3.3",
     "js-yaml": "^3.2.7",
     "nock": "^1.4.0",
     "request": "^2.54.0",
