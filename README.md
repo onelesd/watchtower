@@ -2,6 +2,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/revett/watchtower" target="_blank"><img src="https://img.shields.io/travis/revett/watchtower.svg?style=flat-square"></a>
+  <a href="https://coveralls.io/r/revett/watchtower" target="_blank"><img src="https://img.shields.io/coveralls/revett/watchtower.svg?style=flat-square"></a>
 </p>
 
 <p align="center">
