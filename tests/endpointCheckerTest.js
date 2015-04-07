@@ -10,7 +10,6 @@ describe("EndpointChecker", function() {
     var endpoints = [
       {
         site: "BBC",
-        page_name: "Test #1",
         url: "http://bbc.co.uk/test-url"
       }
     ];

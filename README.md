@@ -15,7 +15,7 @@ A very simple package which checks the status of links on your site, and posts a
 ### Install
 
 ```
-npm install watchtower
+npm install watchtower-js
 ```
 
 ### Usage
@@ -26,7 +26,7 @@ First create a **config.yaml** (see section below), then:
 var watchtower  = require("watchtower");
 var config_path = "/path/to/config.yaml";
 
-watchtower.startWatch(config_path);
+new watchtower(config_path).start();
 ```
 
 or run from the **command-line**:
@@ -42,15 +42,12 @@ sites:
   - name: "BBC"
     base: "http://bbc.co.uk"
     endpoints:
-      - name: "News Home Page"
-        path: "/news"
-      - name: "Election 2015 Home Page"
-        path: "/news/election/2015"
+      - path: "/news"
+      - path: "/news/election/2015"
   - name: "Guardian"
     base: "http://theguardian.com"
     endpoints:
-      - name: "UK Home Page"
-        path: "/uk"
+      - path: "/uk"
 
 ```
 

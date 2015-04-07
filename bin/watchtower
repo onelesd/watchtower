@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
 "use strict";
-var path = require("path");
-var fs   = require("fs");
-var lib  = path.join(path.dirname(fs.realpathSync(__filename)), "../lib");
+
+var path       = require("path");
+var fs         = require("fs");
+var lib        = path.join(path.dirname(fs.realpathSync(__filename)), "../lib");
+var watchtower = require(lib + "/watchtower.js");
 
 if (process.argv.length > 2) {
   var config_path = process.argv[2];
-  require(lib + "/watchtower.js").startWatch(config_path);
+  new watchtower(config_path).start();
 } else {
   console.error("Error: no config path given.");
   process.exit(1);

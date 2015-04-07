@@ -2,10 +2,9 @@ sites:
   - name: "BBC"
     base: "http://bbc.co.uk"
     endpoints:
-      - name: "News"
-        path: "/news"
+      - path: "/news"
+      - path: "/music"
   - name: "Guardian"
     base: "http://theguardian.com"
     endpoints:
-      - name: "Sport"
-        path: "/uk/sport"
+      - path: "/uk/sport"
