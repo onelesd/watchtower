@@ -20,7 +20,8 @@
     "infinite-loop": "^0.2.2",
     "js-yaml": "^3.2.7",
     "nock": "^1.4.0",
-    "request": "^2.54.0",
+    "node-slackr": "^0.1.0",
+    "request": "^2.55.0",
     "underscore": "^1.8.3"
   },
   "engines": {

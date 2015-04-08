@@ -12,9 +12,14 @@ describe("ConfigParser", function() {
   });
 
   describe("#parse()", function() {
-    describe("non-looped", function() {
+    describe("Basic", function() {
       var config = {
-        loop: false,
+        loop: {
+          enabled: false
+        },
+        slack: {
+          enabled: false
+        },
         endpoints: [
           {
             site: "BBC",
@@ -38,30 +43,71 @@ describe("ConfigParser", function() {
       });
     });
 
-    describe("looped", function() {
-      var config = {
-        loop: true,
-        interval: 5000,
-        endpoints: [
-          {
-            site: "BBC",
-            url: "http://bbc.co.uk/news"
+    describe("loop mode", function() {
+      describe("enabled", function() {
+        var config = {
+          loop: {
+            enabled: true,
+            interval: 5000
           },
-          {
-            site: "BBC",
-            url: "http://bbc.co.uk/music"
+          slack: {
+            enabled: false
           },
-          {
-            site: "Guardian",
-            url: "http://theguardian.com/uk/sport"
-          }
-        ]
-      };
-      var path   = "./tests/fixtures/loop_config.yaml";
-      var parser = new configParser(path);
+          endpoints: [
+            {
+              site: "BBC",
+              url: "http://bbc.co.uk/news"
+            },
+            {
+              site: "BBC",
+              url: "http://bbc.co.uk/music"
+            },
+            {
+              site: "Guardian",
+              url: "http://theguardian.com/uk/sport"
+            }
+          ]
+        };
+        var path   = "./tests/fixtures/loop_config.yaml";
+        var parser = new configParser(path);
 
-      it("should parse YAML.", function() {
-        assert.deepEqual(config, parser.parse());
+        it("should parse YAML.", function() {
+          assert.deepEqual(config, parser.parse());
+        });
+      });
+    });
+
+    describe("Slack mode", function() {
+      describe("enabled", function() {
+        var config = {
+          loop: {
+            enabled: false
+          },
+          slack: {
+            enabled: true,
+            webhook_url: "http://test-url.slack.com"
+          },
+          endpoints: [
+            {
+              site: "BBC",
+              url: "http://bbc.co.uk/news"
+            },
+            {
+              site: "BBC",
+              url: "http://bbc.co.uk/music"
+            },
+            {
+              site: "Guardian",
+              url: "http://theguardian.com/uk/sport"
+            }
+          ]
+        };
+        var path   = "./tests/fixtures/slack_config.yaml";
+        var parser = new configParser(path);
+
+        it("should parse YAML.", function() {
+          assert.deepEqual(config, parser.parse());
+        });
       });
     });
   });

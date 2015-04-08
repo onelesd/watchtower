@@ -3,6 +3,6 @@ node_js:
   - "0.12"
 script:
   - npm install -g mocha istanbul coveralls
-  - istanbul cover _mocha -- -R spec tests/
+  - APP_ENV=test istanbul cover _mocha -- -R spec tests/
   - node tests/integration/watchtowerTest.js
   - coveralls < coverage/lcov.info

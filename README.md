@@ -11,7 +11,7 @@
 
 ### What is this?
 
-A very simple package which checks the status of links on your site, and posts any outages to Slack. This is heavily based upon the **[Linkey](https://github.com/DaveBlooman/linkey)** gem written by **[@daveblooman](https://github.com/daveblooman)**.
+A simple Node package which checks the status of links on your site, and posts any outages to Slack. This is heavily based upon the **[Linkey](https://github.com/DaveBlooman/linkey)** gem written by **[@daveblooman](https://github.com/daveblooman)**.
 
 ### Install
 
@@ -24,7 +24,7 @@ npm install watchtower-js
 First create a **config.yaml** (see section below), then:
 
 ```js
-var watchtower  = require("watchtower");
+var watchtower  = require("watchtower-js");
 var config_path = "/path/to/config.yaml";
 
 new watchtower(config_path).start();
@@ -39,6 +39,7 @@ watchtower /path/to/config.yaml
 ### Config
 
 ```yaml
+slack_webhook_url: "https://hooks.slack.com/services/xxxxx/xxxxx/xxxxx"
 sites:
   - name: "BBC"
     base: "http://bbc.co.uk"
@@ -59,7 +60,7 @@ npm install && npm install -g mocha
 ```
 
 ```
-mocha tests/
+APP_ENV=test mocha tests/
 ```
 
 ### Licence
