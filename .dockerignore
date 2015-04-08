@@ -1,0 +1,8 @@
+.git
+tests
+coverage
+node_modules
+.gitignore
+.travis.yml
+README.md
+.dockerignore
