@@ -6,6 +6,9 @@
   "repository": {
     "url": "https://github.com/revett/watchtower"
   },
+  "scripts": {
+    "test": "APP_ENV=test mocha tests"
+  },
   "main": "./lib/watchtower",
   "keywords": [
     "monitor",
@@ -25,5 +28,8 @@
   },
   "engines": {
     "node": "*"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4"
   }
 }
