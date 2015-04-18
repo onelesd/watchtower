@@ -21,10 +21,10 @@
   "dependencies": {
     "cli-color": "^0.3.3",
     "js-yaml": "^3.2.7",
+    "lodash": "^3.7.0",
     "nock": "^1.4.0",
     "node-slackr": "^0.1.0",
-    "request": "^2.55.0",
-    "underscore": "^1.8.3"
+    "request": "^2.55.0"
   },
   "engines": {
     "node": "*"
