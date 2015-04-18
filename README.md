@@ -13,6 +13,10 @@
 
 A simple Node package which checks the status of links on your site, and posts any outages to Slack. This is heavily based upon the **[Linkey](https://github.com/DaveBlooman/linkey)** gem written by **[@daveblooman](https://github.com/daveblooman)**.
 
+### Screenshot
+
+![Screenshot of Slack](http://cl.ly/image/1L3N1g3N2r1i/Image%202015-04-18%20at%201.32.39%20am.png)
+
 ### Install
 
 ```
@@ -33,24 +37,27 @@ new watchtower(config_path).start();
 or run from the **command-line**:
 
 ```
-watchtower /path/to/config.yaml
+watchtower-js /path/to/config.yaml
 ```
 
 ### Config
 
 ```yaml
-slack_webhook_url: "https://hooks.slack.com/services/xxxxx/xxxxx/xxxxx"
+slack_webhook_url: "https://hooks.slack.com/services/****/****/********"
+slack_channel: "@charlie"
+
 sites:
   - name: "BBC"
     base: "http://bbc.co.uk"
     endpoints:
-      - path: "/news"
-      - path: "/news/election/2015"
+      - "/news"
+      - "/music"
+      - "/batman"
+      - "/superman"
   - name: "Guardian"
     base: "http://theguardian.com"
     endpoints:
-      - path: "/uk"
-
+      - "/uk/sport"
 ```
 
 ### Tests

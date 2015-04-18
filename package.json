@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "cli-color": "^0.3.3",
-    "infinite-loop": "^0.2.2",
     "js-yaml": "^3.2.7",
     "nock": "^1.4.0",
     "node-slackr": "^0.1.0",

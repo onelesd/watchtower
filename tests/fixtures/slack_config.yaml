@@ -1,12 +1,13 @@
 slack_webhook_url: "http://test-url.slack.com"
+slack_channel: "#metrics"
 
 sites:
   - name: "BBC"
     base: "http://bbc.co.uk"
     endpoints:
-      - path: "/news"
-      - path: "/music"
+      - "/news"
+      - "/music"
   - name: "Guardian"
     base: "http://theguardian.com"
     endpoints:
-      - path: "/uk/sport"
+      - "/uk/sport"
