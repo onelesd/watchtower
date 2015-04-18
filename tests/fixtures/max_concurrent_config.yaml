@@ -1,0 +1,12 @@
+max_concurrent: 1000
+
+sites:
+  - name: "BBC"
+    base: "http://bbc.co.uk"
+    endpoints:
+      - "/news"
+      - "/music"
+  - name: "Guardian"
+    base: "http://theguardian.com"
+    endpoints:
+      - "/uk/sport"

@@ -14,6 +14,7 @@ describe("ConfigParser", function() {
   describe("#parse()", function() {
     describe("Basic", function() {
       var config = {
+        max_concurrent: 5,
         slack: {
           enabled: false,
           channel: "#general",
@@ -45,6 +46,7 @@ describe("ConfigParser", function() {
     describe("Slack mode", function() {
       describe("enabled", function() {
         var config = {
+          max_concurrent: 5,
           slack: {
             enabled: true,
             channel: "#metrics",
@@ -71,6 +73,37 @@ describe("ConfigParser", function() {
         it("should parse YAML.", function() {
           assert.deepEqual(config, parser.parse());
         });
+      });
+    });
+
+    describe("Custom max_concurrent", function() {
+      var config = {
+        max_concurrent: 1000,
+        slack: {
+          enabled: false,
+          channel: "#general",
+          webhook_url: false
+        },
+        endpoints: [
+          {
+            site: "BBC",
+            url: "http://bbc.co.uk/news"
+          },
+          {
+            site: "BBC",
+            url: "http://bbc.co.uk/music"
+          },
+          {
+            site: "Guardian",
+            url: "http://theguardian.com/uk/sport"
+          }
+        ]
+      };
+      var path   = "./tests/fixtures/max_concurrent_config.yaml";
+      var parser = new configParser(path);
+
+      it("should parse YAML.", function() {
+        assert.deepEqual(config, parser.parse());
       });
     });
   });

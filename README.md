@@ -44,7 +44,9 @@ watchtower-js /path/to/config.yaml
 
 ```yaml
 slack_webhook_url: "https://hooks.slack.com/services/****/****/********"
-slack_channel: "@charlie"
+slack_channel: "#general"
+
+max_concurrent: 5
 
 sites:
   - name: "BBC"
@@ -53,11 +55,11 @@ sites:
       - "/news"
       - "/music"
       - "/batman"
-      - "/superman"
   - name: "Guardian"
     base: "http://theguardian.com"
     endpoints:
       - "/uk/sport"
+      - "/football"
 ```
 
 ### Tests
