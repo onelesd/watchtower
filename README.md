@@ -1,6 +1,7 @@
 <h1 align="center">Watchtower</h1>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/watchtower-js" target="_blank"><img src="https://img.shields.io/npm/v/watchtower-js.svg?style=flat-square"></a>
   <a href="https://travis-ci.org/revett/watchtower" target="_blank"><img src="https://img.shields.io/travis/revett/watchtower.svg?style=flat-square"></a>
   <a href="https://coveralls.io/r/revett/watchtower" target="_blank"><img src="https://img.shields.io/coveralls/revett/watchtower.svg?style=flat-square"></a>
 </p>
