@@ -1,3 +1,4 @@
 /node_modules
 /coverage
 charlie_config.yaml
+*.log

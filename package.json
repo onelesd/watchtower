@@ -3,6 +3,7 @@
   "name": "watchtower-js",
   "description": "Monitors your site and posts outages to Slack.",
   "version": "1.0.0",
+  "license": "MIT",
   "repository": {
     "url": "https://github.com/revett/watchtower"
   },
