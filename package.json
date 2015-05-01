@@ -2,7 +2,7 @@
   "author": "Charlie Revett",
   "name": "watchtower-js",
   "description": "Monitors your site and posts outages to Slack.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "repository": {
     "url": "https://github.com/revett/watchtower"
   },
