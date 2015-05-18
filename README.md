@@ -38,7 +38,7 @@ new watchtower(config_path).start();
 or run from the **command-line**:
 
 ```
-watchtower-js /path/to/config.yaml
+watchtower /path/to/config.yaml
 ```
 
 ### Config
@@ -62,6 +62,8 @@ sites:
       - "/uk/sport"
       - "/football"
 ```
+
+**Note** - the `slack` parameters are *optional*.
 
 ### Tests
 
